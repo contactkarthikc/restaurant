@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.RestaurantListController">
+  <children>
+    <ImageView fx:id="RestaurantListImage" fitHeight="157.0" fitWidth="209.33333333333331" layoutX="28.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+    <ListView id="List" fx:id="ListFxml" editable="false" focusTraversable="false" layoutX="270.0" layoutY="57.0" onMouseClicked="#ListController" orientation="VERTICAL" prefHeight="329.0" prefWidth="316.0" />
+    <Label fx:id="RestaurantInfoLabel" layoutX="20.0" layoutY="207.0" prefHeight="71.0" prefWidth="152.0" text=" " />
+    <TextField fx:id="searchTextField" layoutX="70.0" layoutY="364.0" prefWidth="98.0" />
+    <Label layoutX="17.0" layoutY="367.0" text="Search" />
+    <Label layoutX="17.0" layoutY="305.0" text="City" />
+    <ComboBox fx:id="locationCity" layoutX="43.0" layoutY="303.0" onAction="#LocationController">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="All" />
+          <String fx:value="Ankara" />
+          <String fx:value="Bolu" />
+          <String fx:value="Istanbul" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <MenuBar layoutX="0.0" layoutY="1.0" prefWidth="600.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="">
+          <graphic>
+            <Button mnemonicParsing="false" onAction="#FavoriteButtonController" text="Favorites" />
+          </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false" text="">
+          <graphic>
+            <Button mnemonicParsing="false" onAction="#EditInfoButtonController" text="Edit Info" />
+          </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false" text="">
+          <graphic>
+            <Button mnemonicParsing="false" onAction="#LogoutButtonController" text="Log out" />
+          </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false" text="">
+          <graphic>
+            <Button mnemonicParsing="false" onAction="#CommentsAndRatingButtonController" text="See Comments and Ratings" />
+          </graphic>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Label layoutX="124.0" layoutY="305.0" text="Food Type" />
+    <ComboBox id="foodType" fx:id="foodTypeCombo" onAction="#TypeController" layoutX="185.0" layoutY="303.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="All" />
+          <String fx:value="Kebap" />
+          <String fx:value="Fish" />
+          <String fx:value="Dessert" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button layoutX="176.0" layoutY="364.0" mnemonicParsing="false" onAction="#SearchButtonController" text="Search" />
+    <Pane layoutX="285.0" layoutY="34.0" prefHeight="23.0" prefWidth="300.0">
+      <children>
+        <Label layoutX="91.0" layoutY="0.0" text="Restaurants List">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

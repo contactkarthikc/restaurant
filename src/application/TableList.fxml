@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.9999000000025" prefWidth="288.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.TableListController">
+  <children>
+    <ListView fx:id="tables" layoutX="23.0" layoutY="57.0" prefHeight="213.0" prefWidth="243.0" />
+    <Label layoutX="108.0" layoutY="28.0" text="Table List">
+      <font>
+        <Font name="System Bold" size="16.0" />
+      </font>
+    </Label>
+    <Button fx:id="delete" layoutX="211.0" layoutY="283.0" mnemonicParsing="false" text="Delete" onAction="#TableRemoveController" />
+    <TextField  fx:id="TableNoTextField" layoutX="78.0" layoutY="282.0" prefWidth="50.0"/>
+    <Label layoutX="23.0" layoutY="285.0" prefWidth="55.0" text="Table No:" />
+    <Button fx:id="add"  layoutX="141.0" layoutY="283.0" mnemonicParsing="false" prefWidth="55.0" text="Add" onAction="#TableAddController"/>
+  </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.MenuCreationController">
+  <children>
+    <ListView layoutX="309.0" layoutY="49.0" prefHeight="261.0" prefWidth="291.0" />
+    <Label layoutX="14.0" layoutY="84.0" minHeight="10.000091552734375" prefHeight="22.0" text="Food Name" />
+    <TextField layoutX="100.0" layoutY="84.0" prefWidth="90.0" />
+    <Label layoutX="14.0" layoutY="123.0" minHeight="10.000091552734375" prefHeight="22.0" text="Food Type" />
+    <ChoiceBox layoutX="100.0" layoutY="124.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="14.0" layoutY="166.0" minHeight="10.000091552734375" prefHeight="22.0" text="Food Price" />
+    <TextField layoutX="100.0" layoutY="166.0" prefWidth="90.0" />
+    <Label layoutX="190.0" layoutY="169.0" text="TL" />
+    <Button layoutX="91.0" layoutY="280.0" mnemonicParsing="false" text="Add to Menu" />
+    <Label layoutX="418.0" layoutY="27.0" minHeight="10.000091552734375" prefHeight="22.0" text="Current Menu" />
+    <Button layoutX="309.0" layoutY="319.0" mnemonicParsing="false" text="Delete Selected Food" />
+    <Button layoutX="38.0" layoutY="319.0" mnemonicParsing="false" onAction="#BackButtonController" text="Back" />
+    <TextArea layoutX="100.0" layoutY="201.0" prefHeight="59.0" prefWidth="133.0" wrapText="true" />
+    <Label layoutX="16.0" layoutY="222.0" prefWidth="62.0" text="Food Info " />
+  </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="446.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.EditRestaurantInfoController">
+  <children>
+    <Label layoutX="137.0" layoutY="30.0" prefHeight="43.9609375" prefWidth="176.0" text="Edit Restaurant Info" textAlignment="LEFT">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Label layoutX="62.0" layoutY="94.0" text="Restaurant Name" />
+    <Label layoutX="62.0" layoutY="174.0" text="Bank IBAN" />
+	<TextField fx:id="RestaurantNameTextField" layoutX="184.0" layoutY="90.0" onAction="#EditRestaurantNameController" onInputMethodTextChanged="#EditRestaurantNameController" onKeyPressed="#EditRestaurantNameController" onKeyReleased="#EditRestaurantNameController" onKeyTyped="#EditRestaurantNameController" prefWidth="200.0" />    <Label layoutX="62.0" layoutY="134.0" text="Open Time" />
+    <Label layoutX="241.0" layoutY="134.0" text="Close Time" />
+    <TextField fx:id="RestaurantIbanTextField" layoutX="184.0" layoutY="171.0" onAction="#EditIbanController" onInputMethodTextChanged="#EditIbanController" onKeyPressed="#EditIbanController" onKeyReleased="#EditIbanController" onKeyTyped="#EditIbanController" prefWidth="200.0" />
+    <Label layoutX="62.0" layoutY="211.0" text="Restaurant Telephone" />
+    <TextField fx:id="RestaurantTelephoneTextField"  onAction="#EditTelepController" onInputMethodTextChanged="#EditTelepController" onKeyPressed="#EditTelepController" onKeyReleased="#EditTelepController" onKeyTyped="#EditTelepController" layoutX="184.0" layoutY="208.0" prefWidth="200.0" />
+    <Label layoutX="62.0" layoutY="250.0" text="Type" />
+    <TextField fx:id="RestaurantTypeTextField"  onAction="#EditTypeController" onInputMethodTextChanged="#EditTypeController" onKeyPressed="#EditTypeController" onKeyReleased="#EditTypeController" onKeyTyped="#EditTypeController"  layoutX="184.0" layoutY="245.0" prefWidth="200.0" />
+    <Button layoutX="196.0" layoutY="290.0" mnemonicParsing="false" text="Submit" onAction="#SubmitButtonController" />
+    <ComboBox fx:id="openCombox" layoutX="143.0" layoutY="131.0"  onAction="#RestaurantOpenController">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1:00" />
+          <String fx:value="2:00" />
+          <String fx:value="3:00" />
+          <String fx:value="4:00" />
+          <String fx:value="5:00" />
+          <String fx:value="6:00" />
+          <String fx:value="7:00" />
+          <String fx:value="8:00" />
+          <String fx:value="9:00" />
+          <String fx:value="10:00" />
+          <String fx:value="11:00" />
+          <String fx:value="12:00" />
+          <String fx:value="13:00" />
+          <String fx:value="14:00" />
+          <String fx:value="15:00" />
+          <String fx:value="16:00" />
+          <String fx:value="17:00" />
+          <String fx:value="18:00" />
+          <String fx:value="19:00" />
+          <String fx:value="20:00" />
+          <String fx:value="21:00" />
+          <String fx:value="22:00" />
+          <String fx:value="23:00" />
+          <String fx:value="24:00" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="closeCombox" layoutX="313.0" layoutY="131.0"  onAction="#RestaurantCloseController">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1:00" />
+          <String fx:value="2:00" />
+          <String fx:value="3:00" />
+          <String fx:value="4:00" />
+          <String fx:value="5:00" />
+          <String fx:value="6:00" />
+          <String fx:value="7:00" />
+          <String fx:value="8:00" />
+          <String fx:value="9:00" />
+          <String fx:value="10:00" />
+          <String fx:value="11:00" />
+          <String fx:value="12:00" />
+          <String fx:value="13:00" />
+          <String fx:value="14:00" />
+          <String fx:value="15:00" />
+          <String fx:value="16:00" />
+          <String fx:value="17:00" />
+          <String fx:value="18:00" />
+          <String fx:value="19:00" />
+          <String fx:value="20:00" />
+          <String fx:value="21:00" />
+          <String fx:value="22:00" />
+          <String fx:value="23:00" />
+          <String fx:value="24:00" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+  </children>
+</AnchorPane>

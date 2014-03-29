@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.SignUpCustomerController">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <Label layoutX="224.0" layoutY="14.0" prefHeight="43.9609375" prefWidth="176.0" text="Sign Up Customer" textAlignment="LEFT">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="124.0" layoutY="75.0" text="Name" />
+        <Label layoutX="124.0" layoutY="105.0" text="Email" />
+        <Label layoutX="124.0" layoutY="136.0" text="Password" />
+        <Label layoutX="124.0" layoutY="171.0" text="Re-Enter Password" />
+        <Label layoutX="124.0" layoutY="207.0" text="*Credit Card Number" />
+        <TextField fx:id="SignUpCustomerNameTextField" layoutX="246.0" layoutY="75.0" onKeyReleased="#SignUpCustomerNameController" prefWidth="200.0" />
+        <TextField fx:id="SignUpCustomerEmailTextField" layoutX="246.0" layoutY="105.0" onKeyReleased="#SignUpCustomerEmailController" prefWidth="200.0" />
+        <PasswordField id="SignUpCustomerPasswordtField" fx:id="SignUpCustomerPasswordField" layoutX="246.0" layoutY="136.0" onKeyPressed="#SignUpCustomerPasswordController" onKeyReleased="#SignUpCustomerPasswordController" onKeyTyped="#SignUpCustomerPasswordController" prefWidth="200.0" />
+        <PasswordField fx:id="SignUpCustomerRePasswordField" layoutX="246.0" layoutY="171.0" onKeyPressed="#SignUpCustomerRePasswordController" onKeyReleased="#SignUpCustomerRePasswordController" onKeyTyped="#SignUpCustomerRePasswordController" prefWidth="200.0" />
+        <TextField fx:id="SignUpCustomerCardNumberTextField" layoutX="246.0" layoutY="204.0" onKeyReleased="#SignUpCustomerCardNumberController" prefWidth="200.0" />
+        <Label layoutX="200.0" layoutY="226.0" prefHeight="43.9609375" prefWidth="200.0" text="*Credit Card number can be empty" />
+        <Button layoutX="269.0" layoutY="277.0" mnemonicParsing="false" onAction="#SignUpCustomerButton" text="Sign Up" />
+        <Button fx:id="signUpCustomerBackButton" layoutX="34.0" layoutY="344.0" mnemonicParsing="false" onAction="#SignUpCustomerBackButtonController" text="Back" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

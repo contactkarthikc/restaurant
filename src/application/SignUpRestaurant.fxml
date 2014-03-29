@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.SignUpRestaurantController">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <Label layoutX="224.0" layoutY="14.0" prefHeight="43.9609375" prefWidth="176.0" text="Sign Up Restaurant" textAlignment="LEFT">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="124.0" layoutY="59.0" text="Restaurant Name" />
+        <Label layoutX="123.0" layoutY="139.0" text="Restaurant Telephone" />
+        <TextField fx:id="SignUpRestaurantNameTextField" layoutX="245.0" layoutY="58.0" onAction="#SignUpRestaurantNameController" onInputMethodTextChanged="#SignUpRestaurantNameController" onKeyPressed="#SignUpRestaurantNameController" onKeyReleased="#SignUpRestaurantNameController" onKeyTyped="#SignUpRestaurantNameController" prefWidth="200.0" />
+        <Label layoutX="123.0" layoutY="99.0" text="Open Time" />
+        <Label layoutX="300.0" layoutY="99.0" text="Close Time" />
+        <TextField fx:id="SignUpRestaurantTelephoneTextField" layoutX="246.0" layoutY="139.0" onAction="#SignUpRestaurantTelephoneController" onKeyPressed="#SignUpRestaurantTelephoneController" onKeyReleased="#SignUpRestaurantTelephoneController" onKeyTyped="#SignUpRestaurantTelephoneController" prefWidth="200.0" />
+        <Label layoutX="123.0" layoutY="233.0" text="Bank IBAN" />
+        <TextField fx:id="SignUpRestaurantIbanTextField" layoutX="245.0" layoutY="230.0" onAction="#SignUpRestaurantIbanController" onKeyPressed="#SignUpRestaurantIbanController" onKeyReleased="#SignUpRestaurantIbanController" onKeyTyped="#SignUpRestaurantIbanController" prefWidth="200.0" />
+        <Label layoutX="124.0" layoutY="278.0" text="Location" />
+        <Label layoutX="121.0" layoutY="325.0" text="Confirm Code" />
+        <TextField fx:id="SignUpRestaurantConfirmTextField" layoutX="246.0" layoutY="322.0" onKeyReleased="#SignUpRestaurantConfirmController" prefWidth="200.0" />
+        <Button layoutX="272.0" layoutY="352.0" mnemonicParsing="false" onAction="#SignUpRestaurantSignUpButtonController" text="Sign Up" />
+        <TextArea fx:id="SignUpRestaurantLocationTextArea" layoutX="246.0" layoutY="256.0" onKeyPressed="#SignUpRestaurantLocationController" onKeyReleased="#SignUpRestaurantLocationController" onKeyTyped="#SignUpRestaurantLocationController" prefHeight="59.0" prefWidth="200.0" wrapText="true" />
+        <Button fx:id="SignUpRestaurantBackButton" layoutX="37.0" layoutY="352.0" mnemonicParsing="false" onAction="#SignUpRestaurantBackButtonController" text="Back" />
+        <ComboBox fx:id="openCombox" layoutX="205.0" layoutY="99.0" onAction="#SignUpRestaurantOpenTimeController">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="1:00" />
+              <String fx:value="2:00" />
+              <String fx:value="3:00" />
+              <String fx:value="4:00" />
+              <String fx:value="5:00" />
+              <String fx:value="6:00" />
+              <String fx:value="7:00" />
+              <String fx:value="8:00" />
+              <String fx:value="9:00" />
+              <String fx:value="10:00" />
+              <String fx:value="11:00" />
+              <String fx:value="12:00" />
+              <String fx:value="13:00" />
+              <String fx:value="14:00" />
+              <String fx:value="15:00" />
+              <String fx:value="16:00" />
+              <String fx:value="17:00" />
+              <String fx:value="18:00" />
+              <String fx:value="19:00" />
+              <String fx:value="20:00" />
+              <String fx:value="21:00" />
+              <String fx:value="22:00" />
+              <String fx:value="23:00" />
+              <String fx:value="24:00" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <ComboBox fx:id="closeCombox" layoutX="375.0" layoutY="99.0" onAction="#SignUpRestaurantCloseTimeController">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="1:00" />
+              <String fx:value="2:00" />
+              <String fx:value="3:00" />
+              <String fx:value="4:00" />
+              <String fx:value="5:00" />
+              <String fx:value="6:00" />
+              <String fx:value="7:00" />
+              <String fx:value="8:00" />
+              <String fx:value="9:00" />
+              <String fx:value="10:00" />
+              <String fx:value="11:00" />
+              <String fx:value="12:00" />
+              <String fx:value="13:00" />
+              <String fx:value="14:00" />
+              <String fx:value="15:00" />
+              <String fx:value="16:00" />
+              <String fx:value="17:00" />
+              <String fx:value="18:00" />
+              <String fx:value="19:00" />
+              <String fx:value="20:00" />
+              <String fx:value="21:00" />
+              <String fx:value="22:00" />
+              <String fx:value="23:00" />
+              <String fx:value="24:00" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label layoutX="123.0" layoutY="173.0" text="Password" />
+        <Label layoutX="123.0" layoutY="200.0" text="Re-Password" />
+        <PasswordField fx:id="SignUpRestaurantPasswordTextField" layoutX="246.0" layoutY="173.0" onAction="#SignUpRestaurantRePasswordController" onKeyPressed="#SignUpRestaurantPasswordController" onKeyReleased="#SignUpRestaurantPasswordController" onKeyTyped="#SignUpRestaurantPasswordController" prefWidth="200.0" />
+        <PasswordField fx:id="SignUpRestaurantRePasswordTextField" layoutX="246.0" layoutY="200.0" onAction="#SignUpRestaurantRePasswordController" onKeyPressed="#SignUpRestaurantRePasswordController" onKeyReleased="#SignUpRestaurantRePasswordController" onKeyTyped="#SignUpRestaurantRePasswordController" prefWidth="200.0" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

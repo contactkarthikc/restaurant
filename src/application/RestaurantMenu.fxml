@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.RestaurantMenuController">
+  <children>
+    <Pane layoutX="0.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0">
+      <children>
+        <Label fx:id="restaurantName" layoutX="232.0" layoutY="2.0" prefHeight="23.94140625" prefWidth="159.0" text="Restaurant Name">
+          <font>
+            <Font name="System Bold" size="18.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label font="$x1" layoutX="399.0" layoutY="22.0" text="Menu" />
+        <Button layoutX="17.0" layoutY="270.0" mnemonicParsing="false" onAction="#ReservationButtonController" prefWidth="85.00009999999747" text="Reservation" />
+        <Button layoutX="86.0" layoutY="344.0" mnemonicParsing="false" onAction="#OrderFinalButtonController" prefWidth="73.0" text="Order" />
+        <ListView fx:id="restaurantOrder" layoutX="265.0" layoutY="234.0" onMouseClicked="#OrderDeleteController" prefHeight="136.9609375" prefWidth="317.999977929685" />
+        <Label font="$x1" layoutX="399.0" layoutY="208.0" text="Order" />
+        <Button layoutX="66.0" layoutY="173.0" mnemonicParsing="false" text="Comment" />
+                <Button layoutX="175.0" layoutY="224.0" mnemonicParsing="false" text="Add Fav" onAction="#AddFavorite" />
+        <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" text="Remove Fav" onAction="#RemoveFavorite" />
+        <Button layoutX="6.0" layoutY="371.0" mnemonicParsing="false" onAction="#BackButtonController" text="Back" />
+        <TextArea layoutX="7.0" layoutY="91.0" prefHeight="76.25" prefWidth="200.0" wrapText="true" />
+        <Label layoutX="144.0" layoutY="274.0" prefHeight="17.0" text="Rating" />
+        <ComboBox layoutX="183.0" layoutY="272.0" minWidth="49.0" prefHeight="21.0" prefWidth="49.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="1" />
+              <String fx:value="2" />
+              <String fx:value="3" />
+              <String fx:value="4" />
+              <String fx:value="5" />
+              <String fx:value="6" />
+              <String fx:value="7" />
+              <String fx:value="8" />
+              <String fx:value="9" />
+              <String fx:value="10" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <TextField fx:id="tableCode" layoutX="122.0" layoutY="314.0" prefWidth="85.00009155273438" />
+        <Label layoutX="17.0" layoutY="314.0" prefHeight="17.0" text="Enter Table Code" />
+        <ToggleButton layoutX="6.0" layoutY="46.0" mnemonicParsing="false" text="Call Waiter" />
+        <ToggleButton layoutX="105.0" layoutY="46.0" mnemonicParsing="false" onAction="#RequestBillController" text="Payment Request" />
+      </children>
+    </Pane>
+    <ListView fx:id="restaurantMenu" editable="true" layoutX="268.0" layoutY="47.0" onMouseClicked="#menuController" prefHeight="163.0" prefWidth="318.0" />
+  </children>
+</AnchorPane>

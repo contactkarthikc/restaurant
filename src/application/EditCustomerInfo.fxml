@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="512.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.EditCustomerInfoController">
+  <children>
+    <Label layoutX="37.0" layoutY="71.0" text="Change Name" />
+    <Label layoutX="37.0" layoutY="146.0" text="New Credit Card Number" />
+    <Label layoutX="37.0" layoutY="111.0" text="New Password" />
+    <PasswordField fx:id="editNewPasswordTextField" layoutX="181.0" layoutY="108.0" prefWidth="135.0" onKeyReleased="#EditCustomerPassController" onKeyTyped="#EditCustomerPassController" />
+    <TextField fx:id="editNameTextField" layoutX="181.0" layoutY="68.0" prefWidth="135.0" onKeyReleased="#EditCustomerNameController" onKeyTyped="#EditCustomerNameController"/>
+    <TextField fx:id="editNewCrediCardNumberTextField" layoutX="181.0" layoutY="143.0" prefWidth="200.0" onKeyReleased="#EditCustomerCreditController" onKeyTyped="#EditCustomerCreditController" />
+    <Label layoutX="139.0" layoutY="14.0" text="Edit Customer Informations">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Button layoutX="228.0" layoutY="209.0" mnemonicParsing="false" onAction="#SubmitButtonController" text="Submit" />
+  </children>
+</AnchorPane>
